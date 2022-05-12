@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio-player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+    <main class = "main-container">
+        <img src = "" class = "page">
+        <audio src="" class = "sound"></audio>
+        <div class="container">
+            <div class="controls"></div>
+            <div class = "play-list">
+                <ul class = "list">
+                </ul>
+            </div>
+            <div class = "poster"></div>
+            <div class = "play"></div>
+            <div class = "next"></div>
+            <div class = "prev"></div>
+            <div class = "artist"></div>
+            <div class = "song-title"></div>
+            <input type = "range" class = "progress-song" min = "0" max = "" value = "0"/> 
+            <div class = "current">0:00</div>
+            <div class = "duration"></div>
+            <div class = "vol-mute"></div>
+            <div class = "count">
+                <div class = "now-song">4</div>
+                <div class = "line">/</div>
+                <div class = "all-song"></div>
+            </div>
+            <input type = "range" class = "volume" min = "0" max = "1" value = "1" step="0.1"/>
+            <div class="hamburger">
+                <span class="h-line line1"></span>
+                <span class="h-line line2"></span>
+                <span class="h-line line3"></span>
+            </div>
+        </div>
+    </main>
+    <footer class = "footer container">
+        <a class="f-github" href="https://github.com/Sergey-98" target="_blank">
+            Sergey-98
+        </a>
+        <p class = "year">2022</p>
+        <a class="rsschool" href="https://rs.school/js-stage0/" target="_blank">
+            <img src="assets/svg/logo.svg" alt="RS School" width="100" height="50">
+        </a>
+</footer>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
