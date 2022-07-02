@@ -97,28 +97,42 @@ body {
     left: 80%;
     top: 75%;
 }
+@keyframes text {
+    0%{
+      transform: translate(100%, 0);
+    }
+    
+    100%{
+      transform: translate(-170%, 0);
+    }
+}
+.artist-wrapper {
+    z-index: 3;
+    position: absolute;
+    width: 45%;
+    top: 73%;
+    right: 25%;
+    overflow-x: hidden;
+}
 .artist {
     color: yellowgreen;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 18px;
     white-space: nowrap;
-    z-index: 3;
-    position: absolute;
-    width: 20%;
-    top: 76%;
-    right: 50%;
+    /* text-align: center; */
+    /* animation: text 10s infinite linear; */
 }
 .song-title {
-    width: 1%;
+    width: 45%;
     position: absolute;
     color: var(--color-white);
     z-index: 3;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     top: 83%;
-    white-space: nowrap;
-    right: 70%;
+    white-space: wrap;
+    right: 25%;
 }
 .progress-song {
     -webkit-appearance: none;
@@ -198,7 +212,14 @@ body {
     left: 100%;
     top: 0;
     bottom: 0;
+    /* overflow-y: auto; */
+    padding: 15px 0;
+}
+.wrapper-list {
+    width: 100%;
+    height: 100%;
     overflow-y: auto;
+    
 }
 .list {
     display: flex;
@@ -209,6 +230,7 @@ body {
     font-size: 17px;
     padding-right: 5%;
     list-style: none;
+    /*  */
 }
 .new-artist {
     border-bottom: solid 1px yellow;
