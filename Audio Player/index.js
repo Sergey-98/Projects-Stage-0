@@ -78,7 +78,11 @@ function playAudio() {
         songPoster = playlist[numberPlay].poster;
         background = playlist[numberPlay].backPoster;
         nowSong.textContent = numberPlay + 1;
-        
+        if (artistSong.length > 15) {
+            artist.style.cssText = 'white-space: nowrap; text-align: center; animation: text 10s infinite linear;';
+        } else {
+            artist.style.cssText = 'white-space: nowrap;'; 
+        }
         audio.play();
         activeSong (numberPlay);
         play.style.backgroundImage = 'url(assets/svg/pause.svg)';
@@ -150,6 +154,7 @@ function playNext() {
     playAudio();
 }
 
+
 function playPrev() {
     if (numberPlay == 0) {
         numberPlay = playlistLength-1;
@@ -187,7 +192,6 @@ prev.addEventListener('click', (event) => {
 
 function activeSong (number) {
     newArtist.forEach((elem) => elem.classList.remove('active'));
-    // console.log(newArtist[number]);
     newArtist[number].classList.add('active');  
 }
 
